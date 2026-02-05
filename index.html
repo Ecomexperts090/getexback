@@ -1,159 +1,354 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Relationship Mastery Guide – Limited Offer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apne Ex Ko Wapas Payein - The Ultimate Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            scroll-behavior: smooth;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI',sans-serif;}
-body{background:#0f0f0f;color:#fff;line-height:1.6}
+        .gradient-text {
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-/* HERO */
-.hero{
-  padding:30px 15px;
-  text-align:center;
-  background:linear-gradient(to bottom,#000,#1a1208);
-}
-.hero h1{font-size:26px;color:#ffb400;margin-bottom:10px}
-.hero p{font-size:16px;color:#ddd}
+        .hero-bg {
+            background: radial-gradient(circle at top right, #fff5f5, #ffffff);
+        }
 
-/* IMAGE */
-.hero img,.section img{
-  width:100%;
-  border-radius:12px;
-  margin:20px 0;
-}
+        .cta-glow {
+            animation: glow 2s infinite;
+        }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  padding:15px 25px;
-  margin:15px 0;
-  background:#ffb400;
-  color:#000;
-  font-size:18px;
-  font-weight:bold;
-  border-radius:50px;
-  text-decoration:none;
-  animation:pulse 1.5s infinite;
-}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(255,180,0,.7)}
-  70%{box-shadow:0 0 0 15px rgba(255,180,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(255,180,0,0)}
-}
+        @keyframes glow {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
 
-/* SECTION */
-.section{padding:30px 15px}
-.section h2{color:#ffb400;margin-bottom:15px}
-.section ul li{margin-bottom:10px}
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
 
-/* OFFER */
-.offer{
-  background:#1e1305;
-  padding:20px;
-  text-align:center;
-  border:2px dashed #ffb400;
-  margin:30px 0;
-}
-.offer h3{font-size:22px;color:#ffb400}
-
-/* TRUST */
-.trust{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-top:20px;
-}
-.trust div{
-  background:#1a1a1a;
-  padding:15px;
-  text-align:center;
-  border-radius:10px;
-}
-
-/* STICKY */
-.sticky{
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  background:#000;
-  padding:10px;
-  text-align:center;
-  z-index:99;
-}
-
-</style>
+        .help-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .help-card:hover {
+            transform: scale(1.05);
+            background: white;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
 
-<body>
+    <!-- Sticky Urgency Bar -->
+    <div class="bg-red-600 text-white text-center py-2 px-4 text-sm font-bold sticky top-0 z-50 shadow-lg">
+        🔥 लिमिटेड टाइम ऑफर: कीमत बढ़ने वाली है <span id="timer" class="bg-white text-red-600 px-2 py-0.5 rounded ml-1 font-mono">10:00</span>
+    </div>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>क्या आपकी एक्स आपको छोड़कर चली गई है?</h1>
-  <p>अगर आज भी दिल मानता है, तो यह आपके लिए है…</p>
-  <img src="image1.jpg">
-  <a href="#buy" class="btn">🔥 अभी Buy करें – ₹199</a>
-</div>
+    <!-- Hero Section -->
+    <header class="relative hero-bg pt-16 pb-24 px-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10" data-aos="fade-up">
+            <span class="inline-block bg-red-100 text-red-600 px-4 py-1 rounded-full text-xs font-bold mb-6 tracking-widest uppercase">
+                अब रोना बंद करो, एक्शन लो!
+            </span>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">
+                अपने Ex को वापस पाएं और <span class="gradient-text text-nowrap">सच्चा प्यार हासिल करें</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                पीछा करना और भीख मांगना बंद करें। हमारी साइकोलॉजी-बेस्ड स्ट्रैटेजी से उन्हें एहसास दिलाएं कि आप उनके लिए कितने ज़रूरी हैं।
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                <a href="#pricing" class="cta-glow bg-red-600 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:bg-red-700 w-full md:w-auto transition-all">
+                    कॉम्बो ऑफर लें - मात्र ₹199
+                </a>
+            </div>
+            
+            <div class="mt-8 flex items-center justify-center gap-2 text-yellow-500">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-gray-500 text-sm ml-2 font-medium">4.9/5 (12,400+ छात्र सफल)</span>
+            </div>
+        </div>
+    </header>
 
-<!-- PAIN -->
-<div class="section">
-  <h2>आप अकेले नहीं हैं…</h2>
-  <p>
-    ब्रेकअप के बाद दर्द, पछतावा, गुस्सा –  
-    ये सब सामान्य है।  
-    लेकिन सही साइकोलॉजी से रिश्ते दोबारा जोड़े जा सकते हैं।
-  </p>
-  <img src="image2.jpg">
-</div>
+    <!-- How This Guide Helps Section (New) -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">यह गाइड आपकी मदद <span class="text-red-600">कैसे करेगी?</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">हम आपको सिर्फ सलाह नहीं देते, हम आपको एक पूरा रोडमैप देते हैं जिससे आपका रिश्ता फिर से जीवित हो सके।</p>
+            </div>
 
-<!-- BENEFITS -->
-<div class="section">
-  <h2>इस Combo Guide में क्या मिलेगा?</h2>
-  <ul>
-    <li>✔ एक्स को वापस लाने की साइकोलॉजी</li>
-    <li>✔ बात शुरू करने के सही तरीके</li>
-    <li>✔ रिश्ते को दोबारा मजबूत करने के सीक्रेट्स</li>
-    <li>✔ पर्सनालिटी डेवलपमेंट मास्टरी</li>
-  </ul>
-</div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Part 1 -->
+                <div class="help-card bg-white/50 p-8 rounded-[2rem] border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">माइंडसेट रीसेट</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">सबसे पहले हम आपके दिमाग से डर और अकेलापन निकालेंगे ताकि आप कॉन्फिडेंस के साथ बात कर सकें।</p>
+                </div>
 
-<!-- OFFER -->
-<div class="offer" id="buy">
-  <h3>🔥 Limited Time Offer 🔥</h3>
-  <p><del>₹1999</del> <strong>Only ₹199</strong></p>
-  <a href="#" class="btn">💳 Buy Now</a>
-</div>
+                <!-- Part 2 -->
+                <div class="help-card bg-white/50 p-8 rounded-[2rem] border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">मैजिक मैसेजिंग</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">हम आपको ऐसे वर्ड-टू-वर्ड मैसेज सिखाएंगे जो उनके दिल में फिर से आपके लिए जगह बनाएंगे।</p>
+                </div>
 
-<!-- IMAGE -->
-<div class="section">
-  <img src="image3.jpg">
-  <a href="#buy" class="btn">🚀 अभी डाउनलोड करें</a>
-</div>
+                <!-- Part 3 -->
+                <div class="help-card bg-white/50 p-8 rounded-[2rem] border border-gray-200" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">अट्रैक्शन रिबिल्ड</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">पर्सनालिटी में ऐसे बदलाव लाएं कि वो खुद आपसे बात करने के लिए तड़प उठें और आपकी वैल्यू समझें।</p>
+                </div>
 
-<!-- TRUST -->
-<div class="section">
-  <h2>100% Safe & Trusted</h2>
-  <div class="trust">
-    <div>📩 Email पर तुरंत डिलीवरी</div>
-    <div>🔒 100% Secure Payment</div>
-    <div>♾️ Lifetime Access</div>
-    <div>📱 Mobile Friendly</div>
-  </div>
-</div>
+                <!-- Part 4 -->
+                <div class="help-card bg-white/50 p-8 rounded-[2rem] border border-gray-200" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">लाइफटाइम बॉन्ड</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">रिश्ता वापस पाने के बाद उसे हमेशा के लिए कैसे मजबूत रखना है, इसकी पूरी सीक्रेट तकनीक।</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- FINAL CTA -->
-<div class="offer">
-  <h3>आज नहीं तो शायद कभी नहीं</h3>
-  <a href="#" class="btn">🔥 FINAL BUY – ₹199</a>
-</div>
+    <!-- The Problem Section -->
+    <section class="bg-white py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">क्या आप ये गलतियां कर रहे हैं?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-red-50 p-8 rounded-3xl border border-red-100" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md mb-6 text-red-500 text-xl">
+                        <i class="fas fa-comment-slash"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">बार-बार कॉल/टेक्स्ट</h3>
+                    <p class="text-gray-600">आप जितना मैसेज करेंगे, वो उतना दूर भागेंगे। इससे आप लाचार और 'Desperate' लगते हैं।</p>
+                </div>
+                <div class="bg-red-50 p-8 rounded-3xl border border-red-100" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md mb-6 text-red-500 text-xl">
+                        <i class="fas fa-sad-tear"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">माफी और मिन्नतें</h3>
+                    <p class="text-gray-600">भीख मांगने से अट्रैक्शन नहीं बढ़ता। रिस्पेक्ट वापस पाना सबसे ज़्यादा ज़रूरी है।</p>
+                </div>
+                <div class="bg-red-50 p-8 rounded-3xl border border-red-100" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-md mb-6 text-red-500 text-xl">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">सोशल मीडिया स्टॉकिंग</h3>
+                    <p class="text-gray-600">उनकी हर मूव check करना बंद करें। इससे सिर्फ आपकी मेंटल हेल्थ खराब होगी और वैल्यू कम होगी।</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- STICKY -->
-<div class="sticky">
-  <a href="#buy" class="btn">🔥 Buy Now – ₹199</a>
-</div>
+    <!-- Testimonials Section -->
+    <section class="py-24 px-6 bg-gray-900 text-white overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">सक्सेस स्टोरीज</h2>
+            <p class="text-center text-gray-400 mb-16" data-aos="fade-up">असली लोग, असली नतीजे</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-800 p-8 rounded-3xl border border-gray-700" data-aos="fade-up">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"मुझे लगा था सब खत्म हो गया। पर इस गाइड की साइकोलॉजी ट्रिक्स ने कमाल कर दिया! 2 साल का ब्रेक-अप फिक्स हो गया।"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center font-bold">R</div>
+                        <div>
+                            <p class="font-bold">राहुल शर्मा</p>
+                            <p class="text-xs text-gray-500">दिल्ली, भारत</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-800 p-8 rounded-3xl border border-gray-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"Free Personality Guide ने मेरी लाइफ बदल दी। अब मेरा Ex खुद मुझे कॉल्स करता है। बेस्ट इन्वेस्टमेंट!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold">P</div>
+                        <div>
+                            <p class="font-bold">प्रिया वर्मा</p>
+                            <p class="text-xs text-gray-500">मुंबई, भारत</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-800 p-8 rounded-3xl border border-gray-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"सिर्फ 199 में इतना नॉलेज? मैं दंग रह गया। ब्रेकअप के बाद मेरा कॉन्फिडेंस जीरो था, अब मैं पूरी तरह बदल चुका हूँ।"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center font-bold">A</div>
+                        <div>
+                            <p class="font-bold">अमित गोयल</p>
+                            <p class="text-xs text-gray-500">लखनऊ, भारत</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The FREE Bonus Section -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto bg-gradient-to-r from-red-600 to-red-800 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row border-4 border-white" data-aos="flip-up">
+            <div class="p-10 md:p-16 flex-1 text-white">
+                <span class="bg-yellow-400 text-black px-4 py-1 rounded-full font-black text-xs uppercase mb-6 inline-block">महा लूट ऑफर</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 uppercase">
+                    मुफ्त: पर्सनालिटी डेवलपमेंट गाइड
+                </h2>
+                <p class="text-red-50 mb-6 text-lg">
+                    Ex वापस चाहिए तो खुद को बदलना होगा। हम दे रहे हैं हमारी बेस्ट-सेलिंग पर्सनालिटी गाइड बिल्कुल मुफ्त!
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-3"></i> कॉन्फिडेंस बढ़ाने का अचूक तरीका</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-3"></i> बॉडी लैंग्वेज की असली शक्ति</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-3"></i> अट्रैक्टिव बनने के सीक्रेट्स</li>
+                </ul>
+            </div>
+            <div class="bg-black/20 backdrop-blur-sm p-10 flex items-center justify-center md:w-1/3 text-white border-l border-white/10">
+                <div class="text-center">
+                    <div class="text-6xl font-black mb-2 uppercase">FREE</div>
+                    <div class="text-white/60 line-through text-xl">कीमत: ₹1999</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Checkout Section -->
+    <section id="pricing" class="py-24 px-6 bg-gray-50">
+        <div class="max-w-lg mx-auto bg-white border-2 border-red-600 rounded-[2.5rem] shadow-2xl overflow-hidden" data-aos="zoom-in">
+            <div class="bg-red-600 p-8 text-center text-white">
+                <h3 class="text-2xl font-bold uppercase tracking-wide">लिमिटेड टाइम कॉम्बो</h3>
+                <p class="opacity-90">सिर्फ आज के लिए स्पेशल ऑफर</p>
+            </div>
+            <div class="p-10">
+                <div class="mb-8">
+                    <div class="flex justify-between items-center mb-4 border-b border-dashed pb-4">
+                        <span class="text-gray-700 font-medium text-sm">Ultimate Recovery Blueprint</span>
+                        <span class="font-bold text-gray-400 line-through">₹999</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4 border-b border-dashed pb-4">
+                        <span class="text-gray-700 font-medium text-sm">Personality Development Guide</span>
+                        <span class="font-bold text-red-400 line-through">₹1999</span>
+                    </div>
+                    <div class="flex justify-between font-extrabold text-3xl mt-8 bg-red-50 p-5 rounded-2xl text-red-600 items-center">
+                        <span class="text-lg">कुल कीमत:</span>
+                        <span>₹199</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-center text-xs text-gray-500 font-bold">
+                        <i class="fas fa-lock text-green-500 mr-2"></i> सुरक्षित पेमेंट
+                    </div>
+                    <div class="flex items-center text-xs text-gray-500 font-bold">
+                        <i class="fas fa-bolt text-yellow-500 mr-2"></i> तुरंत एक्सेस
+                    </div>
+                </div>
+
+                <button id="buyBtn" class="w-full bg-green-600 hover:bg-green-700 text-white font-black py-5 rounded-2xl text-2xl shadow-xl transform transition-all active:scale-95 flex items-center justify-center gap-3">
+                    <i class="fas fa-shopping-cart text-xl"></i> अभी खरीदें
+                </button>
+                
+                <p class="text-center mt-6 text-[10px] text-gray-400 uppercase tracking-widest font-bold">Powered by Razorpay Secure Gateway</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 text-center text-gray-400 text-sm border-t bg-white">
+        <div class="flex justify-center gap-6 mb-8 text-xl">
+            <a href="#" class="hover:text-red-600 transition-colors"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-red-600 transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-red-600 transition-colors"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2024 रिलेशनशिप मास्टरी इंडिया. सर्वाधिकार सुरक्षित।</p>
+        <div class="flex justify-center gap-6 mt-4 font-medium">
+            <a href="#" class="hover:underline text-gray-500">प्राइवेसी पॉलिसी</a>
+            <a href="#" class="hover:underline text-gray-500">सपोर्ट टीम</a>
+        </div>
+    </footer>
+
+    <!-- Payment Message Modal -->
+    <div id="paymentModal" class="fixed inset-0 bg-black/80 z-[100] flex items-center justify-center hidden p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-[2rem] p-10 max-w-sm w-full text-center">
+            <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4 class="text-2xl font-bold mb-2">सर्वर से जुड़ रहे हैं...</h4>
+            <p class="text-gray-500 mb-8">कृपया प्रतीक्षा करें, आपका पेमेंट सुरक्षित गेटवे पर रिडायरेक्ट हो रहा है।</p>
+            <div class="w-full bg-gray-100 rounded-full h-2 mb-4 overflow-hidden">
+                <div id="progress" class="bg-green-600 h-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // AOS Animation Init
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Countdown Timer Logic
+        let time = 600;
+        const timerElement = document.getElementById('timer');
+
+        function updateTimer() {
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+            timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            if (time > 0) time--;
+        }
+        setInterval(updateTimer, 1000);
+
+        // Payment Trigger
+        document.getElementById('buyBtn').addEventListener('click', () => {
+            const modal = document.getElementById('paymentModal');
+            const progress = document.getElementById('progress');
+            modal.classList.remove('hidden');
+            
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    window.location.href = "https://razorpay.me/@your-handle"; 
+                } else {
+                    width += 5;
+                    progress.style.width = width + '%';
+                }
+            }, 50);
+        });
+    </script>
 
 </body>
 </html>
